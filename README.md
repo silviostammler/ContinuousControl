@@ -1,7 +1,8 @@
 [//]: # (Image References)
 
 [image1]: https://user-images.githubusercontent.com/10624937/43851024-320ba930-9aff-11e8-8493-ee547c6af349.gif "Trained Agent"
-[image2]: https://user-images.githubusercontent.com/10624937/43851646-d899bf20-9b00-11e8-858c-29b5c2c94ccc.png "Crawler"
+[image2]: https://user-images.githubusercontent.com/10624937/42386929-76f671f0-8106-11e8-9376-f17da2ae852e.png "Kernel"
+[image3]: https://user-images.githubusercontent.com/10624937/43851646-d899bf20-9b00-11e8-858c-29b5c2c94ccc.png "Crawler"
 
 
 # Project 2: Continuous Control
@@ -26,7 +27,7 @@ The second version is useful for algorithms like [PPO](https://arxiv.org/pdf/170
 
 ### Solving the Environment
 
-Note that your project submission need only solve one of the two versions of the environment. 
+Note that your project submission need only solve one of the two versions of the environment. In my case the environment with 20 agents was solved.
 
 #### Option 1: Solve the First Version
 
@@ -40,15 +41,46 @@ The barrier for solving the second version of the environment is slightly differ
 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30. 
 
+## Dependencies
+
+To set up your python environment to run the code in this repository, follow the instructions below.
+
+1. Create (and activate) a new environment with Python 3.6.
+
+	- __Linux__ or __Mac__: 
+	```bash
+	conda create --name drlnd python=3.6
+	source activate drlnd
+	```
+	- __Windows__: 
+	```bash
+	conda create --name drlnd python=3.6 
+	activate drlnd
+	```
+	
+2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.  
+	- Next, install the **classic control** environment group by following the instructions [here](https://github.com/openai/gym#classic-control).
+	- Then, install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
+	
+3. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
+```bash
+git clone https://github.com/udacity/deep-reinforcement-learning.git
+cd deep-reinforcement-learning/python
+pip install .
+```
+
+4. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
+```bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+```
+
+5. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
+
+![Kernel][image2]
+
 ### Getting Started
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
-
-    - **_Version 1: One (1) Agent_**
-        - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
-        - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip)
-        - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
-        - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
+1. Download the environment from the link below.  You need only select the environment that matches your operating system:
 
     - **_Version 2: Twenty (20) Agents_**
         - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
@@ -70,7 +102,7 @@ Follow the instructions in `Continuous_Control.ipynb` to get started with traini
 
 After you have successfully completed the project, you might like to solve the more difficult **Crawler** environment.
 
-![Crawler][image2]
+![Crawler][image3]
 
 In this continuous control environment, the goal is to teach a creature with four legs to walk forward without falling.  
 
